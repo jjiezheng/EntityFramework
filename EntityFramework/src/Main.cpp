@@ -8,8 +8,6 @@
 
 using namespace sturm;
 
-
-
 class C1 : public Component { public: C1() : Component(&typeid(C1)) {}};
 class C2 : public Component { public: C2() : Component(&typeid(C2)) {}};
 class C3 : public Component { public: C3() : Component(&typeid(C3)) {}};
