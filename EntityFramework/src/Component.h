@@ -5,8 +5,6 @@
 #include "ComponentBitMapper.h"
 #include <typeinfo>
 
-
-
 namespace sturm {
 
 	class Component {

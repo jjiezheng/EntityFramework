@@ -22,6 +22,3 @@ void EntityProcessingSystem::ProcessEntities(list<Entity*> entities) {
 }
 
 bool EntityProcessingSystem::CheckProcessing() { return true; }
-
-void EntityProcessingSystem::Process(Entity* e) 
-{}

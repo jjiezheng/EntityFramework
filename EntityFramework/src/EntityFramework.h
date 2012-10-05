@@ -7,7 +7,10 @@
 #include "Entity.h"
 #include "Component.h"
 #include "EntitySystem.h"
+#include "EntityProcessingSystem.h"
 #include "Aspect.h"
 #include "ComponentMapper.h"
+
+#define TYPE(x) &typeid(x);
 
 #endif

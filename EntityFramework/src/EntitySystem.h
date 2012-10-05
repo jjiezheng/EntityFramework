@@ -19,13 +19,12 @@ namespace sturm {
 		virtual ~EntitySystem();
 	protected:
 		virtual void PreProcess();
-		virtual void ProcessEntities(std::list<Entity*> entities);
 		virtual void PostProcess();
 		virtual void EntityAdded(Entity* e);
 		virtual void EntityRemoved(Entity* e);
-		virtual bool CheckProcessing();
+		virtual void ProcessEntities(std::list<Entity*> entities)	= 0;
+		virtual bool CheckProcessing()								= 0;
 	public:
-		virtual void Initialize();
 		void Process();
 		void UpdateEntities(Entity* e);
 		void SetWorld(World* world);

@@ -11,9 +11,9 @@ public:
 	virtual ~EntityProcessingSystem();
 	
 protected:
-	virtual void Process(Entity* e);
-	virtual bool CheckProcessing();
-	virtual void ProcessEntities(std::list<Entity*> entities);
+	virtual void Process(Entity* e) = 0;
+	bool CheckProcessing();
+	void ProcessEntities(std::list<Entity*> entities);
 };
 
 #endif
