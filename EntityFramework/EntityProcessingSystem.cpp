@@ -10,6 +10,8 @@ EntityProcessingSystem::EntityProcessingSystem(Aspect aspect, const type_info* t
 	: EntitySystem(aspect, ti)
 {}
 
+EntityProcessingSystem::~EntityProcessingSystem() {}
+
 void EntityProcessingSystem::ProcessEntities(list<Entity*> entities) {
 	list<Entity*>::iterator it = entities.begin();
 	for(; it != entities.end(); ++it) {
@@ -18,3 +20,5 @@ void EntityProcessingSystem::ProcessEntities(list<Entity*> entities) {
 }
 
 bool EntityProcessingSystem::CheckProcessing() { return true; }
+
+void EntityProcessingSystem::Process(Entity* e) {}
