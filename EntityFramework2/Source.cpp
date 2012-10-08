@@ -1,6 +1,7 @@
 #include "EF.h"
 #include "Aspect.h"
 #include <typeinfo>
+
 using namespace inertia;
 
 class c1 : public Component {
@@ -27,7 +28,7 @@ int main(int argc, char** argv) {
 	e->addComponent(new c1());
 	
 	
-
+	
 
 
 	return 0;
