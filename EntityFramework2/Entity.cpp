@@ -6,6 +6,8 @@ Entity::Entity(Game* game, EntityId id)
 	: _id(id), _game(game)
 {
 	_cm = _game->getComponentMgr();
+	componentBits.reset();
+	systemBits.reset();
 }
 
 Entity::~Entity() {}
@@ -15,3 +17,6 @@ void Entity::addComponent(Component* comp) {
 }
 
 int Entity::getId() { return _id; }
+
+
+

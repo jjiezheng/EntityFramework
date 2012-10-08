@@ -9,10 +9,11 @@ namespace inertia {
 	**/
 	class Component {
 	protected:
-		Component(const type_info* ti);
+		Component(const type_info* ti) : typeInfo(ti) {};
 	public:
 		const type_info* const typeInfo;
 	};
+;
 };
 
 #endif

@@ -4,6 +4,7 @@
 #include "Game.h"
 #include "Entiity.h"
 #include "Typedefs.h"
+#include "IdPool.h"
 #include <map>
 
 namespace inertia {
@@ -17,15 +18,20 @@ namespace inertia {
 	**/
 	class EntityManager {
 	public:
+		friend class Game;
+
+	public:
 		~EntityManager();
 
-		Entity* CreateEntity();
+		Entity* createEntity();
+	
 	protected:
 		EntityManager(Game* game);
 		EntityManager(const EntityManager& em);
 	private:
 		Game* _game;
 		EntityMap _entities;
+		IdPool _idPool;
 	};
 };
 

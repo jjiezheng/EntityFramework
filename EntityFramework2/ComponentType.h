@@ -13,39 +13,28 @@ namespace inertia{
 	private:
 		const type_info* _type;
 		int _index;	
-
-
-
-	public:
 		
-
-
-	
-
-	
-
-};
-
+	};
 
 
 	/**
-			Generates and stores unique index per component type
-		**/
-		class ComponentTypeMap {
-			friend ComponentType;
+		Generates and stores unique index per component type
+	**/
+	class ComponentTypeMap {
+		friend ComponentType;
 
-			public:
-			/** 
-			**/
-			static ComponentType* getTypeFor(const type_info* type);
+		public:
+		/** 
+		**/
+		static ComponentType* getTypeFor(const type_info* type);
 		
-			/** 
-			**/
-			static int getIndexFor(const type_info* type);
-		private:
-			static int _indexKey;
-			static std::map<const type_info*, ComponentType*> _componentTypes;
-		};
+		/** 
+		**/
+		static int getIndexFor(const type_info* type);
+	private:
+		static int _indexKey;
+		static std::map<const type_info*, ComponentType*> _componentTypes;
 	};
+};
 
 #endif
